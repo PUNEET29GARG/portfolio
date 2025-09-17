@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Project 4 — IPL Data Analysis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>.sticky-top{position:fixed;top:0;left:0;right:0;z-index:40;background:#ffffffcc;padding:10px;}</style>
+</head>
+<body class="bg-gradient-to-b from-slate-50 to-white text-slate-800">
+
+  <div class="sticky-top shadow">
+    <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+      <div class="text-sm font-semibold">IPL Data Analysis</div>
+      <div class="flex gap-2">
+        <a href="index.html#projects" class="px-3 py-2 bg-primary text-white rounded">⬅ Back</a>
+        <a href="index.html" class="px-3 py-2 ring-1 rounded">Home</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="pt-20 max-w-4xl mx-auto px-6 pb-12">
+    <h1 class="text-3xl font-bold mb-4">IPL Data Analysis</h1>
+    <p class="text-slate-700 mb-6">
+      Python analysis of match & player-level data to identify performance drivers and help franchises make data-driven decisions.
+    </p>
+
+    <img src="images/IPL Dashboard.jpg" alt="IPL Analysis" class="w-full rounded-lg shadow mb-6">
+
+    <section class="space-y-4 text-slate-700">
+      <h2 class="text-2xl font-semibold">Problem Statement</h2>
+      <p>
+        Teams and analysts needed quantitative evidence about which player metrics or match conditions (toss, venue, powerplay performance) influence match outcomes most reliably.
+      </p>
+
+      <h2 class="text-2xl font-semibold">Approach</h2>
+      <ul class="list-disc list-inside">
+        <li>Engineered features such as strike rate, economy rate, win ratios and venue-level averages.</li>
+        <li>Used grouping and aggregation to surface players/teams with consistently high impact metrics.</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold">Insights</h2>
+      <ul class="list-disc list-inside">
+        <li>Players with strong powerplay strike rates and bowlers with low economy in middle overs have outsized influence on wins (insights surfaced in visualization).</li>
+        <li>Venue-level patterns (e.g., high-scoring grounds) help in tactical selection and match planning.</li>
+      </ul>
+
+      <h2 class="text-2xl font-semibold">Outcome</h2>
+      <p>
+        Franchises can use the analysis to prioritize player recruitment by metric (not just reputation), design batting/bowling orders for specific venues, and inform broadcast narratives around match-up advantages.
+      </p>
+    </section>
+
+    <div class="mt-8 flex gap-3">
+      <a href="index.html#projects" class="px-4 py-2 bg-gray-200 rounded">Back to Projects</a>
+      <a href="index.html" class="px-4 py-2 bg-primary text-white rounded">Home</a>
+    </div>
+  </main>
+</body>
+</html>

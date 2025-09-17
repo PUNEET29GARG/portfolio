@@ -1,0 +1,444 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Puneet Kumar Garg — Data Analyst</title>
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Google fonts & Tailwind -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { primary: '#06b6d4' }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial; }
+    /* profile image: show head area better */
+    .profile-img { object-fit: cover; object-position: center top; }
+    /* chatbot small tweaks */
+    .chat-card { box-shadow: 0 8px 30px rgba(2,6,23,0.12); }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-slate-50 to-white text-slate-800">
+
+  <!-- NAV -->
+  <header class="fixed w-full z-40 bg-white/60 backdrop-blur-md">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="#home" class="text-lg font-extrabold">Puneet <span class="text-primary">Garg</span></a>
+
+      <nav class="hidden md:flex gap-6 items-center text-sm font-medium">
+        <a href="#about" class="hover:text-primary">About</a>
+        <a href="#experience" class="hover:text-primary">Experience</a>
+        <a href="#projects" class="hover:text-primary">Projects</a>
+        <a href="#skills" class="hover:text-primary">Skills</a>
+        <a href="#contact" class="hover:text-primary">Contact</a>
+        <a href="assets/Resume.pdf" class="ml-2 bg-primary text-white px-4 py-2 rounded-md">Download CV</a>
+      </nav>
+
+      <div class="md:hidden flex items-center gap-2">
+        <button id="mobileBtn" class="p-2 rounded-md ring-1 ring-slate-200 bg-white">Menu</button>
+        <button id="chatToggleMobile" class="p-2 rounded-full bg-primary text-white chat-card">💬</button>
+      </div>
+    </div>
+
+    <!-- mobile menu -->
+    <div id="mobileMenu" class="md:hidden hidden px-6 pb-4 bg-white/70">
+      <div class="flex flex-col gap-2">
+        <a href="#about" class="py-2">About</a>
+        <a href="#experience" class="py-2">Experience</a>
+        <a href="#projects" class="py-2">Projects</a>
+        <a href="#skills" class="py-2">Skills</a>
+        <a href="#contact" class="py-2">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="pt-24">
+
+    <!-- HERO (full viewport) -->
+    <section id="home" class="h-screen flex items-center">
+      <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+        <!-- left: intro -->
+        <div class="space-y-4">
+          <p class="text-sm uppercase tracking-wide text-slate-500">Hello, I'm</p>
+          <h1 class="text-4xl md:text-5xl font-extrabold">Puneet Kumar Garg</h1>
+          <p class="text-lg text-slate-700 max-w-xl">
+            Result-oriented Data Analyst with ~2 years of experience turning complex data into actionable insights. Skilled in Python, SQL, Excel, Power BI, and prompt engineering for LLMs. Proven record in building automation pipelines, leading small teams, and delivering analytics products that improved decision-making and operational performance.
+          </p>
+
+          <div class="mt-6 flex gap-3">
+            <a href="#projects" class="inline-flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-md font-medium">View Projects</a>
+            <a href="#contact" class="inline-flex items-center gap-2 ring-1 ring-slate-200 px-5 py-3 rounded-md">Contact</a>
+          </div>
+
+          <div class="mt-6 text-sm text-slate-600 flex gap-4">
+            <a href="https://github.com/PUNEET29GARG" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/puneet-29-garg" target="_blank" rel="noreferrer">LinkedIn</a>
+            <span class="text-slate-400">•</span>
+            <a href="assets/Resume.pdf" class="underline">Download CV</a>
+          </div>
+        </div>
+
+        <!-- right: profile -->
+        <div class="flex justify-center md:justify-end">
+            <div class="w-72 h-96 rounded-2xl overflow-hidden shadow-2xl bg-white/5">
+              <!-- object-cover makes it fill frame, object-position crops to head-to-stomach -->
+              <img src="images/profile picture.jpg" alt="Puneet Garg" 
+                   class="w-full h-full object-cover object-top">
+            </div>
+          </div>
+          
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="max-w-6xl mx-auto px-6 py-12">
+      <div class="md:flex md:gap-8 items-start">
+        <div class="md:w-2/3">
+          <h2 class="text-2xl font-bold">About Me</h2>
+          <p class="mt-4 text-slate-700">
+            I am a Data Analyst with practical experience building dashboards, automating data pipelines, and deriving
+            impactful insights for stakeholders. I specialize in Power BI and Tableau dashboarding, Python (Pandas, NumPy), SQL, and advanced Excel. I also design LLM prompt flows for entity extraction and automation.
+          </p>
+
+          <div class="mt-6 grid grid-cols-2 gap-4 text-sm text-slate-700">
+            <div><strong>Location:</strong> Delhi, India</div>
+            <div><strong>Experience:</strong> ~2 years</div>
+            <div><strong>Email:</strong> puneetgarg440@gmail.com</div>
+            <div><strong>Phone:</strong> (+91) 798-2239-094</div>
+          </div>
+        </div>
+
+        <div class="mt-6 md:mt-0 md:w-1/3">
+          <div class="p-4 bg-gray-50 rounded-lg">
+            <h3 class="font-semibold">Quick Facts</h3>
+            <ul class="mt-3 text-sm text-slate-700 space-y-2">
+              <li>Power BI dashboards, SQL, Python (Pandas)</li>
+              <li>LLM prompt engineering for entity extraction</li>
+              <li>Data storytelling & dashboard design</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="bg-white py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold">Experience</h2>
+        <div class="mt-6 grid md:grid-cols-2 gap-6">
+          <div class="p-4 border rounded-lg">
+            <h3 class="font-semibold">Senior Analyst — Axion Ray</h3>
+            <p class="text-sm text-slate-500">June 2025 - July 2025</p>
+            <ul class="mt-3 text-sm text-slate-700 list-disc list-inside space-y-1">
+              <li>Led a lean analytics team and improved delivery speed by ~30% through streamlined workflows.</li>
+              <li>Collaborated with international stakeholders to translate business needs into analytics requirements.</li>
+              <li>Mentored junior analysts on LLM workflows and analytics best practices.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 border rounded-lg">
+            <h3 class="font-semibold">Data Analyst II — Axion Ray</h3>
+            <p class="text-sm text-slate-500">March 2025 - May 2025</p>
+            <ul class="mt-3 text-sm text-slate-700 list-disc list-inside space-y-1">
+              <li>Engineered few-shot and iterative prompts to extract entities from free text with high accuracy (95% in production pipelines).</li>
+              <li>Automated pre-ingestion workflows using Python, reducing prep time by ~30%.</li>
+              <li>Conducted root cause analysis on ops datasets to surface recurring failure patterns.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 border rounded-lg">
+            <h3 class="font-semibold">Data Analyst — Shree Ram Enterprises</h3>
+            <p class="text-sm text-slate-500">Nov 2023 - Feb 2025</p>
+            <ul class="mt-3 text-sm text-slate-700 list-disc list-inside space-y-1">
+              <li>Designed automated dashboards that reduced manual reporting by ~20%.</li>
+              <li>Delivered insights that informed process improvements and cost optimizations.</li>
+            </ul>
+          </div>
+
+          <div class="p-4 border rounded-lg">
+            <h3 class="font-semibold">Electrical Engineer — Shree Ram Enterprises</h3>
+            <p class="text-sm text-slate-500">June 2017 - Oct 2023</p>
+            <ul class="mt-3 text-sm text-slate-700 list-disc list-inside space-y-1">
+              <li>Led electrical projects and used analysis to optimize resource distribution.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+<section id="projects" class="max-w-6xl mx-auto px-6 py-16">
+    <div class="flex items-center justify-between mb-8">
+      <h2 class="text-3xl font-bold text-slate-800">🚀 Projects</h2>
+      <p class="text-sm text-slate-500">Click <strong>View</strong> → for details, <strong>Live</strong> → for full dashboard/code</p>
+    </div>
+  
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+  
+      <!-- Project 1: Intelligent Entity Mining -->
+      <div class="group bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 overflow-hidden">
+        <div class="relative w-full h-56 bg-slate-100 flex items-center justify-center overflow-hidden">
+          <img src="images/intelligent-entity-mining.png" alt="Intelligent Entity Mining"
+               class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition">Intelligent Entity Mining (LLMs)</h3>
+          <p class="text-gray-600 mb-4">LLM-based pipeline that extracts entities from unstructured text and normalizes them for analytics.</p>
+          <div class="flex gap-3">
+            <a href="project1.html" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition">View</a>
+           </div>
+        </div>
+      </div>
+  
+      <!-- Project 2: Call Center Trends -->
+      <div class="group bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 overflow-hidden">
+        <div class="relative w-full h-56 bg-slate-100 flex items-center justify-center overflow-hidden">
+          <img src="images/call center trends image.png" alt="Call Center Trends"
+               class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition">Call Center's Trends (Power BI)</h3>
+          <p class="text-gray-600 mb-4">Dashboard highlighting call volumes, peaks, and abandonment to optimize staffing decisions.</p>
+          <div class="flex gap-3">
+            <a href="project2.html" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition">View</a>
+            <a href="images/call center trends image.png" target="_blank" class="px-4 py-2 ring-1 ring-slate-300 rounded-lg hover:bg-slate-50 transition">Live</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 3: E-Commerce Sales Analysis -->
+      <div class="group bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 overflow-hidden">
+        <div class="relative w-full h-56 bg-slate-100 flex items-center justify-center overflow-hidden">
+          <img src="images/Ecommerce sales.png" alt="E-Commerce Sales"
+               class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition">E-Commerce Sales Analysis</h3>
+          <p class="text-gray-600 mb-4">KPI dashboard (YTD vs PYTD) uncovering category growth and customer acquisition trends.</p>
+          <div class="flex gap-3">
+            <a href="project3.html" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition">View</a>
+            <a href="images/Ecommerce sales.png" target="_blank" class="px-4 py-2 ring-1 ring-slate-300 rounded-lg hover:bg-slate-50 transition">Live</a>
+
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 4: IPL Data Analysis -->
+      <div class="group bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 overflow-hidden">
+        <div class="relative w-full h-56 bg-slate-100 flex items-center justify-center overflow-hidden">
+          <img src="images/IPL Dashboard.jpg" alt="IPL Dashboard"
+               class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition">IPL Data Analysis (Python)</h3>
+          <p class="text-gray-600 mb-4">Python analysis of IPL matches: team performance, player insights, and match-winning factors.</p>
+          <div class="flex gap-3">
+            <a href="project4.html" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition">View</a>
+            <a href="https://colab.research.google.com/github/PUNEET29GARG/IPL-Case-Study/blob/main/IPL_Case_study.ipynb" target="_blank" class="px-4 py-2 ring-1 ring-slate-300 rounded-lg hover:bg-slate-50 transition">Live</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 5: Movie Ratings -->
+      <div class="group bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 overflow-hidden">
+        <div class="relative w-full h-56 bg-slate-100 flex items-center justify-center overflow-hidden">
+          <img src="images/Movie Ratings.jpg" alt="Movie Ratings"
+               class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition">Movie Ratings Analysis</h3>
+          <p class="text-gray-600 mb-4">SQL + Power BI analysis of movie ratings to uncover audience preferences by genre and decade.</p>
+          <div class="flex gap-3">
+            <a href="project5.html" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition">View</a>
+            <a href="https://colab.research.google.com/github/PUNEET29GARG/Movie-Ratings-Analysis/blob/main/Movie_Ratings_Analysis.ipynb" target="_blank" class="px-4 py-2 ring-1 ring-slate-300 rounded-lg hover:bg-slate-50 transition">Live</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 6: Credit Card Dashboard -->
+      <div class="group bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 overflow-hidden">
+        <div class="relative w-full h-56 bg-slate-100 flex items-center justify-center overflow-hidden">
+          <img src="images/Credit Card Dashboard.png" alt="Credit Card Dashboard"
+               class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition">Credit Card Transaction Report</h3>
+          <p class="text-gray-600 mb-4">Power BI dashboard revealing revenue drivers, customer segmentation, and spending patterns.</p>
+          <div class="flex gap-3">
+            <a href="project6.html" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition">View</a>
+            <a href="images/Credit Card Dashboard.png" target="_blank" class="px-4 py-2 ring-1 ring-slate-300 rounded-lg hover:bg-slate-50 transition">Live</a>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Project 7: Amazon Prime Video -->
+      <div class="group bg-white rounded-2xl shadow-lg border border-slate-100 hover:shadow-2xl hover:-translate-y-2 transform transition duration-300 overflow-hidden">
+        <div class="relative w-full h-56 bg-slate-100 flex items-center justify-center overflow-hidden">
+          <img src="images/Amazon Prime Video Dashboard.png" alt="Amazon Prime Video"
+               class="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition">Amazon Prime Video Dashboard</h3>
+          <p class="text-gray-600 mb-4">Tableau dashboard exploring global content trends by genre, country, and release year.</p>
+          <div class="flex gap-3">
+            <a href="project7.html" class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition">View</a>
+            <a href="https://public.tableau.com/app/profile/puneet.garg/viz/AmazonPrimeVideoDashboard_17029943882390/AmazonPrimeVideoDashboard" target="_blank" class="px-4 py-2 ring-1 ring-slate-300 rounded-lg hover:bg-slate-50 transition">Live</a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  </section>
+  
+
+    <!-- SKILLS -->
+    <section id="skills" class="bg-white py-12">
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-2xl font-bold mb-4">Skills</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm">
+          <div class="p-4 bg-gray-50 rounded-lg">Power BI</div>
+          <div class="p-4 bg-gray-50 rounded-lg">Tableau</div>
+          <div class="p-4 bg-gray-50 rounded-lg">SQL / MySQL</div>
+          <div class="p-4 bg-gray-50 rounded-lg">Python (Pandas, NumPy, Matplotlib)</div>
+          <div class="p-4 bg-gray-50 rounded-lg">Excel (Advanced)</div>
+          <div class="p-4 bg-gray-50 rounded-lg">LLM Prompt Engineering</div>
+          <div class="p-4 bg-gray-50 rounded-lg">Data Visualization</div>
+          <div class="p-4 bg-gray-50 rounded-lg">Git & GitHub</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="max-w-6xl mx-auto px-6 py-12">
+      <h2 class="text-2xl font-bold mb-4">Contact</h2>
+      <p class="text-slate-700 mb-4">Feel free to reach out — I’m open to exciting Data Analyst opportunities.</p>
+      <ul class="text-slate-700 space-y-2">
+        <li><strong>Email:</strong> <a href="mailto:puneetgarg440@gmail.com" class="underline">puneetgarg440@gmail.com</a></li>
+        <li><strong>Phone:</strong> (+91) 798-2239-094</li>
+        <li><strong>Location:</strong> Delhi, India</li>
+      </ul>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-8 text-center text-sm text-slate-500">
+      © <span id="year"></span> Puneet Kumar Garg — Built with Passion
+    </footer>
+
+  </main>
+
+  <!-- CHATBOT (click to open) -->
+  <div id="chatRoot" class="fixed bottom-6 right-6 z-50">
+    <button id="chatToggle" class="bg-primary text-white px-4 py-3 rounded-full chat-bubble">💬</button>
+
+    <div id="chatWindow" class="hidden mt-3 w-80 bg-white rounded-xl p-3 shadow-xl chat-card">
+      <div class="flex items-center justify-between mb-2">
+        <div class="text-sm font-semibold">Chat</div>
+        <button id="chatClose" class="text-slate-500 text-lg">&times;</button>
+      </div>
+
+      <div id="chatLog" class="h-48 overflow-auto text-sm space-y-2 mb-3"></div>
+
+      <div class="flex flex-col gap-2">
+        <div class="flex gap-2">
+          <button onclick="handleSuggestion('Show projects')" class="flex-1 px-3 py-2 ring-1 rounded text-sm">Show Projects</button>
+          <button onclick="handleSuggestion('Download Resume')" class="flex-1 px-3 py-2 ring-1 rounded text-sm">Download Resume</button>
+        </div>
+        <div class="flex gap-2">
+          <button onclick="handleSuggestion('Contact Info')" class="flex-1 px-3 py-2 ring-1 rounded text-sm">Contact Info</button>
+          <button onclick="handleSuggestion('Help')" class="flex-1 px-3 py-2 ring-1 rounded text-sm">Help</button>
+        </div>
+
+        <form id="chatForm" class="mt-1 flex gap-2">
+          <input id="chatInput" placeholder="Type a question..." class="flex-1 p-2 ring-1 ring-slate-200 rounded-md" />
+          <button class="bg-primary text-white px-3 py-2 rounded-md">Send</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mobile menu
+    document.getElementById('mobileBtn').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // chat open/close
+    const chatToggle = document.getElementById('chatToggle');
+    const chatWindow = document.getElementById('chatWindow');
+    const chatClose = document.getElementById('chatClose');
+    const chatLog = document.getElementById('chatLog');
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+
+    chatToggle.addEventListener('click', () => chatWindow.classList.toggle('hidden'));
+    chatClose.addEventListener('click', () => chatWindow.classList.add('hidden'));
+    // mobile chat icon also opens
+    document.getElementById('chatToggleMobile')?.addEventListener('click', () => chatWindow.classList.toggle('hidden'));
+
+    function botReply(text){
+      const el = document.createElement('div');
+      el.className = 'text-sm text-slate-700 bg-gray-100 p-2 rounded';
+      el.innerHTML = text;
+      chatLog.appendChild(el);
+      chatLog.scrollTop = chatLog.scrollHeight;
+    }
+
+    function userReply(text){
+      const el = document.createElement('div');
+      el.className = 'text-sm text-white bg-primary p-2 rounded text-right';
+      el.innerText = text;
+      chatLog.appendChild(el);
+      chatLog.scrollTop = chatLog.scrollHeight;
+    }
+
+    function handleSuggestion(msg){
+      // simulate entering the suggestion and submitting
+      userReply(msg);
+      processChat(msg);
+    }
+
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const msg = chatInput.value.trim();
+      if(!msg) return;
+      userReply(msg);
+      chatInput.value = '';
+      processChat(msg);
+    });
+
+    function processChat(raw){
+      const m = raw.toLowerCase();
+      setTimeout(() => {
+        if(m.includes('project') || m.includes('projects') || m.includes('show projects')) {
+          botReply("🔍 Opening Projects section...");
+          document.querySelector('#projects').scrollIntoView({behavior: 'smooth'});
+        } else if(m.includes('resume') || m.includes('download resume')) {
+          botReply('📄 Downloading resume...');
+          window.open('assets/Resume.pdf', '_blank');
+        } else if(m.includes('contact') || m.includes('contact info')) {
+          botReply('📧 Email: <a href="mailto:puneetgarg440@gmail.com">puneetgarg440@gmail.com</a><br>📞 Phone: (+91) 798-2239-094');
+          document.querySelector('#contact').scrollIntoView({behavior: 'smooth'});
+        } else if(m.includes('help')) {
+          botReply("Try these options: Show Projects, Download Resume, Contact Info. For other info please email <a href='mailto:puneetgarg440@gmail.com'>puneetgarg440@gmail.com</a>.");
+        } else {
+          botReply("For other queries, please connect via email: <a href='mailto:puneetgarg440@gmail.com'>puneetgarg440@gmail.com</a> or call: (+91) 798-2239-094.");
+        }
+      }, 400);
+    }
+  </script>
+</body>
+</html>
